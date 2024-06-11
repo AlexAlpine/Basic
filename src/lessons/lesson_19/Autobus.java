@@ -110,9 +110,12 @@ public class Autobus {
 
     public String toString() {
         // TODO переписать, используя StringBuilder
-        return "Autobus: {id: " + id +  "; capacity:" + capacity +
-                "; driver: " + driver.toString() +
-                "; autopilot: " + autopilot.toString() + " }" ;
+        StringBuilder sb = new StringBuilder("Autobus: { id: ");
+        sb.append(id).append("; capacity: ").append(capacity).append(" } ");
+                sb.append("; driver: ").append(driver.toString());
+                sb.append("; autopilot: ").append(autopilot.toString());
+
+        return sb.toString();
     }
 
     public int getId() {
@@ -140,4 +143,5 @@ public class Autobus {
     public void updateAutopilotSoftware(String softVersion){
         this.autopilot.setSoftwareVersion(softVersion);
     }
+
 }

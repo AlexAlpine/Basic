@@ -9,7 +9,7 @@ public class Autopilot {
     }
 
     public String toString(){
-        return "{Autopilot. SV:" + softwareVersion + "}";
+        return "{ Autopilot. SV:" + softwareVersion + " }";
     }
 
     public String getSoftwareVersion() {
