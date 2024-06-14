@@ -1,10 +1,6 @@
 package lesson_18;
 
 
-import lesson_18.Bus;
-import lesson_18.IntercityBus;
-import lesson_18.Train;
-
 public class TransportApp {
     public static void main(String[] args) {
 
@@ -71,6 +67,10 @@ public class TransportApp {
 
         System.out.println(intercityBus.getCountPassengers() + " | " + intercityBus.getCapacity());
         System.out.println(intercityBus.getCountBicycle() + " | " + intercityBus.getPlaceBicycle());
+
+
+
+
 
     }
 }

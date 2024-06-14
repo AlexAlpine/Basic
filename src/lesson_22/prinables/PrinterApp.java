@@ -15,6 +15,10 @@ public class PrinterApp {
 
     Printable.testStatik("Hello");
 
+    Printable presentation = new Presentation("Inherttrance", "Noname", "IntherIntance in OOP", 20);
+
+        
+
     }
 
 

@@ -1,8 +1,6 @@
 package lesson_18;
 
 
-import lesson_18.Bus;
-
 public class IntercityBus extends Bus {
     private String[] cites;
     private int placeBicycle;
@@ -49,7 +47,20 @@ public class IntercityBus extends Bus {
     }
 
     public boolean dropOffPassengerWithBicycle() {
-        // TODO реализовать метод
+       /*
+       Проверить есть ли в автобусе пассажир + велосипед
+       Если оба есть - уменьшаем кол-во обоих
+       Если кого-нет, ничего не делаем - возвращаем false
+        */
+
+        if (this.getCountPassengers() > 0 && countBicycle > 0) {
+            this.dropOffPassenger();
+            countBicycle--;
+            System.out.printf("Из автобуса %s вышел пассажир с велосипедом \n", this.getModel());
+            return true;
+        }
+
+        System.out.printf("В автобусе %s недостаточно пассажиров и/или велосипедов для высадки\n", this.getModel());
         return false;
     }
 

@@ -33,10 +33,10 @@ public class StringExample {
         System.out.println("concatStr: " + concatStr);
 
         // 3 Склеить все строки и между ними вставить "разделитель"
-        concatStr = String.join(" " , str1, str3); // str1.concat(" ").concat(str3);
+        concatStr = String.join(" ", str1, str3); // str1.concat(" ").concat(str3);
         System.out.println("concatStr: " + concatStr);
 
-        concatStr = String.join("???" , str1, str3, "Java" , "," , "string"); // str1.concat(" ").concat(str3);
+        concatStr = String.join("???", str1, str3, "Java", ",", "string"); // str1.concat(" ").concat(str3);
         System.out.println("concatStr: " + concatStr);
 
         int int1 = 10;
@@ -99,7 +99,8 @@ public class StringExample {
 
         System.out.println("subString: " + subString);
 
-        System.out.println(digits.substring(0, 3+1)); // получить первые четыре символа
+        System.out.println(digits.substring(0, 3 + 1)); // получить первые четыре символа
+
 
     }
 }
