@@ -37,6 +37,5 @@ public class PassengersApp {
 
         System.out.println(bus.getPassengersList());
 
-
     }
 }
