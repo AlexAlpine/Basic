@@ -9,6 +9,8 @@ public class Journal implements Printable {
         this.number = number;
     }
 
+
+
     @Override
     public void print() {
         System.out.println("J: " + name + " # " + number);

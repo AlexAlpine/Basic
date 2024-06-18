@@ -16,4 +16,5 @@ public class Airplane extends Transport implements Flyable {
     void takePassenger() {
         System.out.println("Самолет берет на борт пассажира");
     }
+
 }
