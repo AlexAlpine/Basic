@@ -1,6 +1,8 @@
 package lesson_25.linked_list;
 
-public class MyLinkedList<T> {
+import lesson_25.lists.MyQueue;
+
+public class MyLinkedList<T> implements MyQueue<T> {
 
     private int size;
     private Node<T> first; // голова
@@ -131,6 +133,25 @@ public class MyLinkedList<T> {
 
     }
 
+    @Override
+    public void addLast(T value) {
+        if (first == null) {
+            first = new Node<>(value, null, null);
+        } else if (last == null) {
+            last = new Node<>(value, first, null);
+            first.next = last;
+        }else {
+            Node<T> temp = last;
+            last = new Node<>(value, temp, null);
+            temp.next = last;
+
+        }
+        size++;
+
+    }
+
+
+
     // Добавление элемента в начало списка
     public void addFirst(T value) {
         if (first == null) {
@@ -148,6 +169,32 @@ public class MyLinkedList<T> {
             temp.previous = first;
         }
         size++;
+    }
+
+    @Override
+    public T getFirst() {
+
+        return null;
+    }
+
+    @Override
+    public T getLast() {
+        return null;
+    }
+
+    @Override
+    public T remove() {
+        return null;
+    }
+
+    @Override
+    public T removeFirst() {
+        return null;
+    }
+
+    @Override
+    public T removeLast() {
+        return null;
     }
 
 

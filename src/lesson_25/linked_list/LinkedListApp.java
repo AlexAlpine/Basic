@@ -53,6 +53,18 @@ public class LinkedListApp {
         System.out.println(linkedList);
         Integer val = linkedList.get(15);
         System.out.println(val);
+        System.out.println("\n ========================= \n");
+
+        linkedList.addFirst(2);
+        System.out.println(linkedList);
+
+        linkedList.addLast(1);
+        System.out.println(linkedList);
+
+
+
+
+
 
 
 
