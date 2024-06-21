@@ -2,7 +2,9 @@ package lesson_25.linked_list;
 
 import lesson_25.lists.MyQueue;
 
-public class MyLinkedList<T> implements MyQueue<T> {
+import java.util.Iterator;
+
+public class MyLinkedList<T> implements MyQueue<T>, Iterable<T> {
 
 
         private int size;
@@ -259,8 +261,34 @@ public class MyLinkedList<T> implements MyQueue<T> {
             return sb.toString();
         }
 
+    @Override
+    public Iterator<T> iterator() {
+        return new MyIterator();
+    }
+    private class MyIterator implements Iterator<T> {
 
-        private static class Node<T> {
+            Node<T> item;
+
+        public MyIterator() {
+            this.item = first;
+        }
+
+        @Override
+        public boolean hasNext() {
+            return item != null;
+        }
+
+        @Override
+        public T next() {
+            T value = item.value;
+            item = item.next;
+
+            return value;
+        }
+    }
+
+
+    private static class Node<T> {
             T value;
             Node<T> previous;
             Node<T> next;
